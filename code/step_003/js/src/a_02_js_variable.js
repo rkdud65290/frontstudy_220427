@@ -19,7 +19,7 @@ console.log(checkNumber-likeNumber); // -9 js 특징:자동 형변환
 console.log(checkName-likeNumber); 
 // 문자라고 하더라도 어떠한 계산을 거치는 경우 실제 계산이 안되면 NaN(Not a Naumber)을 표출
 
-var convertNumber = parseInt(checkNumber+'문자'+likeNumber); 
+var convertNumber = parseInt999   (checkNumber+'문자'+likeNumber); 
 console.log(convertNumber);
 
 checkNumber = 100;
