@@ -42,3 +42,6 @@ let len = parts.length;
 
 for(let i=0; i<len; i+=1) {console.log(parts[i]); }
 for(let i in parts) {console.log(parts[i]);}
+//----------------------------------
+console.clear();
+
