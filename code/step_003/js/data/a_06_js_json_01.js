@@ -2,12 +2,13 @@
 // a_06_js_json_01.js
 
 const cardData =[
+  // cardData[0].title
   {
     "key": 1,
     "title": "title_01",
     "content": "content_001",
     "href": "https://naver.com",
-    "image": "img_01.png",
+    "image": "aedrian-cqSfekmQcTE-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -15,7 +16,7 @@ const cardData =[
     "title": "title_02",
     "content": "content_002",
     "href": "#",
-    "image": "img_02.png",
+    "image": "niklas-liniger-zuPiCN7xekM-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -23,7 +24,7 @@ const cardData =[
     "title": "title_03",
     "content": "content_003",
     "href": "https://google.com",
-    "image": "img_03.png",
+    "image": "paul-steiner-iu-J2S20su0-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -31,7 +32,7 @@ const cardData =[
     "title": "title_04",
     "content": "content_004",
     "href": "#",
-    "image": "img_04.png",
+    "image": "ryan-ancill-aJYO8JmVodY-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -39,7 +40,7 @@ const cardData =[
     "title": "title_05",
     "content": "content_005",
     "href": "https://daum.net",
-    "image": "img_05.png",
+    "image": "shiqi-zhao--V08ltyndB4-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -47,7 +48,7 @@ const cardData =[
     "title": "title_06",
     "content": "content_006",
     "href": "https://unsplash.com",
-    "image": "img_06.png",
+    "image": "vasanth-zP9WSatA92E-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -55,7 +56,7 @@ const cardData =[
     "title": "title_07",
     "content": "content_007",
     "href": "#",
-    "image": "img_07.png",
+    "image": "paul-steiner-iu-J2S20su0-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -63,7 +64,7 @@ const cardData =[
     "title": "title_08",
     "content": "content_008",
     "href": "#",
-    "image": "img_08.png",
+    "image": "daniel-lee-mtufYfR1KBE-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -71,7 +72,7 @@ const cardData =[
     "title": "title_09",
     "content": "content_009",
     "href": "#",
-    "image": "img_09.png",
+    "image": "katie-azi-IOoMt4wRcyw-unsplash.jpg",
     "url": "../img/card/"
   },
   {
@@ -79,7 +80,7 @@ const cardData =[
     "title": "title_10",
     "content": "content_010",
     "href": "#",
-    "image": "img_10.png",
+    "image": "daniel-lee-mtufYfR1KBE-unsplash.jpg",
     "url": "../img/card/"
   }
 ]
