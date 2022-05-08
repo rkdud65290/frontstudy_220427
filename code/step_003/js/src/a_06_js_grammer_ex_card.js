@@ -1,4 +1,3 @@
-
 'use strict';
 //a_06_grammer_ex_card.js
 
@@ -12,7 +11,14 @@ const elCard = document.querySelector('.card');
 const elCardUl = elCard.querySelector('ul');
 console.log(elCardUl);
 
-const insertList = `<a href = "#"><div class="image"></div><dl><dt>title_01</dt><dd>content Lorem ipsum dolor sit amet.</dd></dl></a >`
+const insertList = 
+`<a href = "#">
+  <div class="image"></div>
+  <dl>
+    <dt>title_01</dt>
+    <dd>content Lorem ipsum dolor sit amet.</dd>
+  </dl>
+</a >`
 
 // js: 생성-내용삽입-사용
 // ------------------------------------
