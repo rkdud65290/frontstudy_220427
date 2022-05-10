@@ -21,13 +21,23 @@ const insertList =
 </a >`
 
 // js: 생성-내용삽입-사용
+let cardLen = cardData.length;
+for (let i = 0; i < cardLen; i += 1) {
+  let makeLi = document.createElement('li');
+  fnMakeLi(makeLi);
+  fnListInsert(makeLi, i);
+}
+
 // ------------------------------------
+
 // 역할 처리
 const fnMakeLi=function(list){  //()내부에 들어오는 이름을 변수명 list로 통칭
   // let list=makeLi;
   list.innerHTML=insertList;
 elCardUl.append(list);
 };
+
+
 const fnListInsert=function(el, i){
   let elliDt=el.querySelector('dt');
   let elliDd=el.querySelector('dd');
@@ -42,9 +52,3 @@ const fnListInsert=function(el, i){
 };
 
 // --------------------------------------
-let cardLen = cardData.length;
-for(let i =0; i<cardLen; i+=1){
-  let makeLi = document.createElement('li');
-  fnMakeLi(makeLi);
-  fnListInsert(makeLi, i);
-}
