@@ -19,7 +19,7 @@ console.log(checkNumber-likeNumber); // -9 js 특징:자동 형변환
 console.log(checkName-likeNumber); 
 // 문자라고 하더라도 어떠한 계산을 거치는 경우 실제 계산이 안되면 NaN(Not a Naumber)을 표출
 
-var convertNumber = parseInt999   (checkNumber+'문자'+likeNumber); 
+var convertNumber = parseInt(checkNumber+'문자'+likeNumber); 
 console.log(convertNumber);
 
 checkNumber = 100;
@@ -43,15 +43,21 @@ var sample;
 console.log(sample);
 //--------------------------------------------------
 //.date_list 내부에 날짜에 해당하는 요소를 삽입 (31개)
+const elDay=document.querySelector('.day');
+const elUl=elDay.querySelector('ul');
+// console.log(elUl);
+const insertList = `<button type="button">+${i}+일</button>`;
+console.log(insertList);
 var dateList= document.querySelector('date_list');
-var i=1;
-for( ;i<=31;i=i+1 ){
-  // document.write('<li><button type="button">'+i+'일</button></li>');
-  // dateList.innerHTML='<li><button type="button">'+i+'일</button></li>';
-  console.log(i);
-}
-console.log('i:', i);
+for(let i=1;i<=31;i=i+1 ){
+  let makeLi= document.createElement('li');
+  makeLi.innerHTML = insertList;
+  elUl.append(makeLi);
+  // document.write('<button type="button">'+i+'일</button>');
 
+  // dateList.innerHTML='<button type="button">'+i+'일</button>';
+  console.log('i:', i);
+}
 
 // 라면봉지를 생성->라면 내부에 무언가를 채우기->진열
 // -----------------------------------
