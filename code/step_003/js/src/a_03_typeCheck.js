@@ -22,7 +22,7 @@ console.log(bool);
 let num2 = 0;
 console.log(!!num2);
 
-console.clear();
+// console.clear();
 
 // -----------------------------
 /*
@@ -60,7 +60,7 @@ console.log(checkType);
 // js 형타입/ 자료구조
 /*
 원시형태(기본형):number, string , boolean(논리), undefined, null, bigInt, symbol
-특수형태: object (object, array), funtion
+특수형태: object (object, array), function
 */
 
 let ch=NaN;
@@ -68,7 +68,7 @@ checkType= typeof(ch);
 console.log(checkType);
 
 // -----------------------
-console.clear();
+// console.clear();
 
 // Object->Object;
 let obj={
@@ -100,6 +100,8 @@ let gnbList=[
 {'name': 'event', 'href':'#'},
 {'name': 'sns', 'href':'#'},
 ];
+
+// console.log(gnbList[2].href);
 
 for(let i=0; i < gnbList.length; i=i+1 ){
   // console.log(arr[i]);

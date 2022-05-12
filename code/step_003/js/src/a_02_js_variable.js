@@ -42,20 +42,17 @@ btn.addEventListener('click', function(){
 var sample;
 console.log(sample);
 //--------------------------------------------------
-//.date_list 내부에 날짜에 해당하는 요소를 삽입 (31개)
-const elDay=document.querySelector('.day');
-const elUl=elDay.querySelector('ul');
-// console.log(elUl);
-const insertList = `<button type="button">+${i}+일</button>`;
-console.log(insertList);
-var dateList= document.querySelector('date_list');
-for(let i=1;i<=31;i=i+1 ){
-  let makeLi= document.createElement('li');
-  makeLi.innerHTML = insertList;
-  elUl.append(makeLi);
-  // document.write('<button type="button">'+i+'일</button>');
 
-  // dateList.innerHTML='<button type="button">'+i+'일</button>';
+//.date_list 내부에 날짜에 해당하는 요소를 삽입 (31개)
+
+
+var dateList= document.querySelector('.date_list');
+for(let i=1; i<=31; i=i+1 ){
+  // let makeLi= document.createElement('li');
+  // makeLi.innerHTML = insertList;
+  // elUl.append(makeLi);
+  // document.write('<li><button type="button">'+'i'+'일</button></li>');
+  dateList.innerHTML='<li><button type="button">'+i+'일</button></li>';
   console.log('i:', i);
 }
 

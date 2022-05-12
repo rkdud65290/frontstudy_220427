@@ -27,22 +27,22 @@ switch(food) {
 console.log(result);
 
 result= '';
-let bank = '0';
+let bank = 0;
 switch (bank) {
   case 0 : 
-    result += '입금 수행하겠습니다'; 
+    result = '입금 수행하겠습니다'; 
     break;
   case 1 : 
-    result += '송금 수행하겠습니다.'; 
+    result = '송금 수행하겠습니다.'; 
     break;
   case 2 : 
-    result += '계좌 삭제하겠습니다.'; 
+    result = '계좌 삭제하겠습니다.'; 
     break;
   case 3 : 
-    result += '블랙리스트 등극'; 
+    result = '블랙리스트 등극'; 
     break;
   default: 
-    result += '누구신지?';
+    result = '누구신지?';
 }
 console.log(result);
 // --------------------------
@@ -50,9 +50,10 @@ console.clear();
 let link = './content.html';
 let linkText = 'js base';
 const h1 = document.querySelector('h1');
-// h1.innerHTML = '<a href="'+ link + '">'+ linkText +'</a>';
+// h1.innerHTML = '<a href='+ link + '>'+ linkText +'</a>';
 // h1.innerHTML = "<a href=\""+ link +"\">"+linkText+"</a>";
-h1.innerHTML = `<a href="${link}">${linkText}</a>`;
+h1.innerHTML = `<a href=${link}>${linkText}</a>`;
+
 
 // -------------------------------------------------
 // 시나리오:

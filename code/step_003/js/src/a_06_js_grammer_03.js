@@ -39,7 +39,7 @@ console.log(pbj, pbj2);
 
 //----------------------------
 
-console.clear();
+// console.clear();
 let c=5;
 let d=c; // 값 자체를 통으로 copy 가져오는변수 -> 깊은복사
 
@@ -62,7 +62,7 @@ const copyG = [...objGroup];
 objGroup[2]= 100;
 console.log(objGroup,copyG);
 //----------------------------
-console.clear();
+// console.clear();
 const coffeMenu=['americano', 'cafe latte', 'cafe mocha', 'espresso', 'apogato', 'malcha latte'];
 let coffeLen = coffeMenu.length;
 for(let i= 0; i<coffeLen; i+=1) {
@@ -79,7 +79,7 @@ coffeMenu.forEach(function(data, index){
 });
 
 //-------------------------------
-console.clear();
+// console.clear();
 
 const marker = {
   'nike':'shoose',

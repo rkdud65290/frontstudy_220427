@@ -19,6 +19,11 @@ const insertList =
     <dd>content Lorem ipsum dolor sit amet.</dd>
   </dl>
 </a >`
+const fnMakeLi = function (list) {  //()내부에 들어오는 이름을 변수명 list로 통칭
+  // let list=makeLi;
+  list.innerHTML = insertList;
+  elCardUl.append(list);
+};
 
 // js: 생성-내용삽입-사용
 let cardLen = cardData.length;
@@ -31,11 +36,6 @@ for (let i = 0; i < cardLen; i += 1) {
 // ------------------------------------
 
 // 역할 처리
-const fnMakeLi=function(list){  //()내부에 들어오는 이름을 변수명 list로 통칭
-  // let list=makeLi;
-  list.innerHTML=insertList;
-elCardUl.append(list);
-};
 
 
 const fnListInsert=function(el, i){

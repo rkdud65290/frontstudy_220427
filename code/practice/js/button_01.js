@@ -10,3 +10,20 @@ btn.addEventListener('click',function(){
   // console.log(setCount);
   count.innerText=setCount;
 })
+
+// ------------------------------
+const elDay = document.querySelector('.day');
+const elUl = elDay.querySelector('ul');
+console.log(elUl);
+// console.log(insertList);
+const insertList =function(n){
+  return `<button type="button"> ${n}일</button>`;
+}
+const dateList = document.querySelector('.date_list');
+for (let i = 1; i <= 31; i = i + 1) {
+  let makeLi= document.createElement('li');
+  makeLi.innerHTML = insertList(i);
+  elUl.append(makeLi);
+  // console.log('i:', i);
+}
+
