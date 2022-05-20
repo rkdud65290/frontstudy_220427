@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script fetch src="https://unpkg.com/jquery"></script>
+    <script fetch src="https://unpkg.com/jqueryui"></script>
+  <div id="wrap">
+    <h1><a href="../html/content.html">js기초</a></h1>
+    <dl>
+      <dt>title</dt>
+      <dd>content</dd>
+    </dl>
+  </div>
+  <script>
+    (function($){
+      $('#wrap').css({'background-color':'#777'});
+      $('#wrap').on('click', function(){
+        $('#wrap').animate({'background-color':'#f70'});
+      });
+
+      $('dt').on('click',function(){
+        $('dd').slideUp();
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>

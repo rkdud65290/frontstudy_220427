@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 100%; height: auto; margin: auto; padding: auto;
+}
+.part {
+  width: 100%; min-width: 400px; max-width: 600px; height: auto; 
+  margin: auto; padding: 0.5rem; box-sizing: border-box;
+  border: 1px solid #777;
+}
+.part h2 {
+  margin-bottom: 0.5rem;
+}
+dl {
+  width: 100%; height: auto; 
+  border: 1px solid #777;
+}
+dt {width: 100%; height: 40px; background-color: rgb(75, 130, 161); }
+dt>button{width: 100%; height: 100%; background-color: inherit; 
+  font-size: 16px; font-weight: 700;
+}
+dd { display: none;
+  width: 100%; height: auto; 
+  box-sizing: border-box;
+  border: 1px solid #777;
+}
+.inner {
+    width: 100%; height: auto; margin: auto; padding: 1rem; box-sizing: border-box;
+}
+
+.image { float: left; margin-right: 0.5rem;
+  width: 100px; height: 100px; background-color: #f80; 
+}
+
+.inner::after {content: ""; display: block; clear: both;}

@@ -18,6 +18,7 @@ let timed=500;
 // 1.btn_01Dt 를 클릭시 , btn_01Dd를 나타나게 만들기
 //fadeIn 기능=>dd-> display:block->opacity:0->opacity:1
 
+
 btn_01Dt.on('click', function(event){
   event.preventDefault();
 
@@ -32,11 +33,12 @@ btn_01Dt.on('click', function(event){
 let i=0;
 btn_01Dd.css({display:'block', opacity:0});
 let runInterval=setInterval(function(){
-  btn_01Dd.css({opacity:i+=0.01});
-  if(i>=1){clearInterval(runInterval);}
-} ,timed/100);
+    btn_01Dd.css({opacity:i+=0.01});
+    if(i>=1){clearInterval(runInterval);}
+  } ,timed/100);
 });
 
+//---------------------------------------------------
 
 //2. btn_02Dt를 클릭시 btn_02Dd를 나타나게 만들기(slideDown)
 let PERMISSION=true;
@@ -78,16 +80,16 @@ btn_02Dt.on('click', function(event){
     clearInterval(runInterval);
     btn_02Dd.removeAttr('style');
     PERMISSION=true;
-   }
-  }, timed/100); //setInterval
   }
-  }//if(PERMISSION)q
+  }, timed/100); //setInterval
+ }
+}//if(PERMISSION)q
 }); //btn_02Dt.on('click')
 
 
 })(jQuery);
 
-//height(), innerHeight(), outerHeight(), outerHeight(true)
+//높이파악메소드: height()기본높이값, innerHeight()패딩포함 높이값, outerHeight()패딩보더포함 높이값, outerHeight(true)패딩보더마진포함 높이값
 
 // let permission=true;
 // a.on('click', function(){
