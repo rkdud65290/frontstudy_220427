@@ -6,22 +6,22 @@ const jsArea = document.querySelector('.js_area');
   const jsBtn01 = jsArea.querySelector('.btn_01');
   const BtnDt = jsBtn01.querySelector('dt');
   // const BtnDd = jsBtn01.querySelector('dd');
-  const Btn01Dd = BtnDt.nextElementSibling;
+  const BtnDd = BtnDt.nextElementSibling;
 
   //event
   //1. BtnDt를 이벤트처리(클릭) 시, BtnDd를 나타나게 만들기
 
   BtnDt.addEventListener('click', function (event) {
     event.preventDefault();
-    // Btn01Dd.css(); jQuery
-    const ddDisplay = window.getComputedStyle(Btn01Dd).display === 'none';
+    // BtnDd.css(); jQuery
+    const ddDisplay = window.getComputedStyle(BtnDd).display === 'none';
 
     if (ddDisplay) {
-      Btn01Dd.style = 'display:block';
+      BtnDd.style = 'display:block';
     } else {
-      Btn01Dd.removeAttribute('style');
-      // Btn01Dd.style = 'display:block';
-      // Btn01Dd.removeAttr('style'); jQuery
+      BtnDd.removeAttribute('style');
+      // BtnDd.style = 'display:block';
+      // BtnDd.removeAttr('style'); jQuery
     }
   });
 })();
@@ -29,7 +29,7 @@ const jsArea = document.querySelector('.js_area');
 //================================================
 //fsdeIn, fadeOut
 (function(){
-  //BtnDt를 이벤트발생(클릭)시, dd 를 부드럽게 fade처리로 나타나게/사라지게 만들기
+  //2. BtnDt를 이벤트발생(클릭)시, dd 를 부드럽게 fade처리로 나타나게/사라지게 만들기
 
   // 변수 영역----------------------------------------
   const jsBtn = jsArea.querySelector('.btn_02');
@@ -50,7 +50,7 @@ const jsArea = document.querySelector('.js_area');
       BtnDd.style.display='block';
       BtnDd.style.opacity = opacityVAlue / 100;
       let runningInterval= setInterval(function(){
-        if (opacityVAlue < 100){
+        if (opacityVAlue <= 100){
           opacityVAlue += 1;
           BtnDd.style.opacity = opacityVAlue / 100;
         }else{
@@ -78,7 +78,7 @@ const jsArea = document.querySelector('.js_area');
 })(); //function()
 
 //================================================
-//slideDown, slideUp
+//3. slideDown, slideUp
 (function(){
   const jsBtn = jsArea.querySelector('.btn_03');
   const BtnDt = jsBtn.querySelector('dt');
@@ -131,7 +131,7 @@ const fnBlockdd=function(){
     }, timed / 100);
   };
 
-  // 선택자.innerHeight(); ->jQuery에서 높이값 가져오기 기능을 구현
+  // Btndd 높익값 가져오기->선택자.innerHeight(); ->jQuery에서 높이값 가져오기 기능을 구현 
   const fnGetHeight = function () {
     BtnDd.style.display = 'block';
     const size = BtnDd.offsetHeight;
@@ -140,7 +140,7 @@ const fnBlockdd=function(){
   };  
 
   // 추가변수--------------------------------
-  const ddFinalHeight= fnGetHeight();
+  const ddFinalHeight= fnGetHeight(); //높이값 생성 함수
 
 
   //이벤트 수행-------------------------------------
