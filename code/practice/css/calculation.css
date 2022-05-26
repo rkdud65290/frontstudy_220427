@@ -1,44 +1,62 @@
 @charset "utf-8";
 #wrap{
   width: 100%; min-width: 1200px; height: auto;
-}
-li{
-  border: 1px solid #777;
-  width: 100%; height: auto;
   margin: auto;
-  padding: 1.5rem; box-sizing: border-box;
+}
+h1 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-indent: var(--font-title_04);
+  border-bottom: var(--border-line_01);
 
 }
-li>button{
-  width: 100%; height: auto;
+#cal {
+  width: 300px;
+  height: auto;
   margin: auto;
-}
-#cal{
-  width: 500px;  height: 600px;
-  margin: auto;
+  box-sizing: border-box;
+  padding: 0.5rem;
   border: 1px solid #777;
 }
+
 .display {
-  width: 100%; height: 60px;
-  border: 1px solid #777;
-}
-.display>li{
-  width: 100%; height: auto ;
-}
-.ac {
-  width: 200px; height: 100px;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0.2rem;
   margin: auto;
 }
 
-
-ul{
-  width: 100%; height: auto;
+ul {
+  width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-around;
-  width: 100%; height: auto;
+  align-items: center;
 }
-.number {
-  margin: auto;
+ul> li{
+  width: 100%; height: 60px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.display>li{
+  width: 100%; height: 100%;
+  margin: 0; padding: 0;
+  background-color: aqua;
+  border: 1px solid #777;
+}
+
+li>button{
+  width: 100%; height: auto;
+  margin: auto; 
+  border: 1px solid #777;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  font-size: 2rem;
+  text-align: center;
+  background-color: aqua;
 }
 
 

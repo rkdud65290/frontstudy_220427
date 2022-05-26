@@ -28,6 +28,8 @@
     h1.classList.add(CLASSNAME1);
     } else{
     h1.classList.remove(CLASSNAME1);
+      console.log('class이름 있음');
+
     }
   });
   // h1.addEventListener('mouseleave', function(e){
