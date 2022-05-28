@@ -23,12 +23,18 @@ h1 {
 }
 
 .display {
+  display: block;
   height: 50px;
   box-sizing: border-box;
   padding: 0.2rem;
   margin: auto;
 }
-
+.input {
+  width: 100%; height: 50%;
+}
+.calcul-input {
+  width: 100%; height: 50%;
+}
 ul {
   width: 100%;
   height: auto;
@@ -40,12 +46,6 @@ ul> li{
   width: 100%; height: 60px;
   box-sizing: border-box;
   padding: 5px;
-}
-.display>li{
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  background-color: aqua;
-  border: 1px solid #777;
 }
 
 li>button{
