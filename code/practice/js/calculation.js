@@ -12,25 +12,26 @@ const operator = cal.querySelectorAll('.operator');
 
 //함수영역-----------------
 
-function numberElem(e) {
+function numberDisplay(e) {
   number = parseFloat(e.innerText);
   input.innerHTML += number;
 }
+
 // 이벤트영역------------------
 
 num.forEach(function(el) {
   el.addEventListener('click', (event)=>{
-    var number;
+    let number;
     if(input.innerHTML.startsWith("0")){
       if(event.target.innerHTML === '0') {
-        return;
+        console.log(event.target);
     }
     else {
-        numberElem(el);
-        input.innerHTML += number;
+        numberDisplay(el);
+        console.log(event.target);
     }
     } else{
-      numberElem(el);
+      numberDisplay(el);
             if(input.innerHTML.length > 25) {
                 alert("25자리를 초과했습니다!")
                 return input.innerHTML = "";
@@ -41,7 +42,10 @@ num.forEach(function(el) {
   
   });
 
+
 clearAll.addEventListener('click',()=>{
   input.innerHTML="";
   calculInput.innerHTML="";
 })
+
+// switch 문으로 연산자 함수
