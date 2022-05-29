@@ -23,11 +23,11 @@ const sourcePath = {img : '../img/', font: '../fonts/'};
 const dataFile = '../data/drink_menuList.json';
 const elMenuItems = document.querySelector('.content__part__menu_type');
 let elMenuUl = elMenuItems.querySelector('ul');
-let elMunuList = elMenuUl.querySelectorAll('li');
+let elMunuList; // = elMenuUl.querySelectorAll('li');
 
 const elItems = document.querySelector('.content__area__menu__items');
 let elItemsUl;
-
+let TABCOUNT=0;
 // 함수 ----------------------------------------------------------------------
 // 탭메뉴 리스트 기능
 
@@ -79,6 +79,13 @@ const fnMakeLi = function(obj){
   elItemsUl.append(makeLi);
 };
 
+//선택된 li요소의 위치에 class이름(action) 활성화, 나머지 비활성화
+const fnAddActive=function(n){
+  elMunuList.forEach((el,index)=>{
+    (index===n) ? elclassList.add('action') :  el.classList.remove('action');
+  })
+}
+
 // 함수기능 우선 수행 ------------------------------------------------------------
 
 
@@ -90,11 +97,15 @@ fetch(dataFile)
   .then(function(data){
     // 탭 리스트
     let arrTabList = [];
-    data.forEach(function(d){
-      let check = arrTabList.includes(d.category);
-      if(!check){ arrTabList.push(d.category); }
+    // data.forEach(function(d){
+    //   let check = arrTabList.includes(d.category);
+    //   if(!check){ arrTabList.push(d.category); }
+    // });
+    data.filter(d=>{
+      let check=arrTabList.indexOf(d.category)===-1;
+      if(check){arrTabList.push(d.category);}
     });
-    console.log( arrTabList );
+    // console.log( arrTabList );
     elMenuItems.innerHTML = '<ul></ul>';
     elMenuUl = elMenuItems.querySelector('ul');
     let tabLi;
@@ -102,30 +113,30 @@ fetch(dataFile)
       tabLi = document.createElement('li');
       tabLi.innerHTML = `<button type="button">${arrTabList[index]}</button>`;
       elMenuUl.append(tabLi);
-      console.log(tabLi);
+      // console.log(tabLi);
     });
 
-// let elMunuList = elMenuUl.querySelectorAll('li');
+    elMunuList = elMenuUl.querySelectorAll('li');
 
 
 
 
     // 탭 내용 처리
     const fnFilterContent = (menu) => {
-      let m = menu || '커피류';
-      const dataFilter = fnCategoryFilter(m, data);  // console.log( dataFilter );
+      let m = menu || 0;
+      const dataFilter = fnCategoryFilter(arrTabList[m], data);  // console.log( dataFilter );
       fnMakeUl();
       dataFilter.forEach(fnMakeLi);
     }
 
     fnFilterContent();
-
+    elMunuList = elMenuUl.querySelectorAll('li');
     elMunuList.forEach((el, index) => {
       el.addEventListener('click', function(e){
         e.preventDefault();
-        // console.log( e.target.innerText );
-        const menuName = e.target.textContent;
-        fnFilterContent(menuName);
+        fnFilterContent(index);
+        TABCOUNT=index;
+        fnAddActive(TABCOUNT);
       });
     });
 
@@ -169,10 +180,15 @@ const arrList2 = [
 // });
 
 let arrTabList=[];
-arrList.forEach((d,i)=>{
- let insertCheck= arrTabList.includes(d.name);
- if(!insertCheck){
-  arrTabList.push(d.name);
- }
-})
+
+// arrList.forEach((d,i)=>{
+//  let insertCheck= arrTabList.includes(d.name);
+//  if(!insertCheck){ arrTabList.push(d.name); }
+// });
+
+arrList.filter((d,i)=>{
+  if(arrTabList.indexOf(d.name)===-1){
+    arrTabList.push(d.name);
+  }
+});
 console.log(arrTabList);
