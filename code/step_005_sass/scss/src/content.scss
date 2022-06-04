@@ -114,11 +114,11 @@ background-image: url('../img/news/a.png'); }
         background-size: cover;
         background-image: url('../img/news/a.png'); }   
       
-        & li a {
-          &:hover{color: #fff;}
-          &:focus{color: #af0;}
-          &:visited{color: #aaf;}
-        }
+     & li a {
+      &:hover{color: #fff;}
+      &:focus{color: #af0;}
+      &:visited{color: #aaf;}
+      }
 
 }  // #contentBox
 
