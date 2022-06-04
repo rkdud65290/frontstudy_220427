@@ -1,1 +1,12 @@
 /* content.scss */
+// 한줄주석은 변환 X
+
+$full:100%;
+
+:root{
+  --full:100%
+}
+
+body{
+  width: calc(var(--full) / 2); height: $full / 2;
+}

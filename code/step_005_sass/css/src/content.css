@@ -1,1 +1,9 @@
 /* content.scss */
+:root {
+  --full:100% ;
+}
+
+body {
+  width: calc(var(--full) / 2);
+  height: 50%;
+}
