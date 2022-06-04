@@ -8,5 +8,10 @@ $full:100%;
 }
 
 body{
-  width: calc(var(--full) / 2); height: $full / 2;
+  width: calc(var(--full) / 2); 
+  height: $full / 2;
 }
+
+// scss로 작업한 것은 css 변환 가능
+// css로 작업한 것은 scss변환 X
+// css로 수정을 했따면 이후 작업은 css에서 해야한다.
