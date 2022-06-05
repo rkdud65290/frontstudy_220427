@@ -1,0 +1,14 @@
+// footer.scss
+/* footer.css */
+@use '../common/mixin' as *;
+
+#footBox {
+  width: 100%; height: 300px;
+  background-color: #333;
+  box-sizing: border-box; padding: 10px;
+}
+
+.foot__con__area{
+  @include container();
+  background-color: #fff;
+}

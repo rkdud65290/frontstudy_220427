@@ -1,0 +1,12 @@
+//_layout_content
+/* _layout_content */
+@use "../common/mixin" as *;
+
+.container__wrap {
+  width: 100%; height: auto;  margin: auto;
+  background-color: #fdd;
+}
+
+@import "../temp/layout_test/viewBox";
+
+@import "../temp/layout_test/newsBox";
