@@ -1,0 +1,11 @@
+// b_01_responsive.scss
+/*b_01_responsive.css */
+
+@use '../common/mixin' as *;
+@use '../temp/headBox';
+
+#wrap {
+  width: 100%; height: auto; min-height: 31.25rem;
+  background-color: #ccc;
+} 
+
